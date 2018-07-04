@@ -3,4 +3,5 @@ Example documents made with the intention of learning LaTeX. Based off my readin
 
 # Directory Structure
 1. doc01
+
    Document created based on the material found in chapters 1 and 2.
