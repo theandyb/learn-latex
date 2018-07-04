@@ -1,8 +1,152 @@
-\documentclass{article}
+\documentclass[11pt]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{verbatim} % required for \begin{comment}
+\usepackage{syntonly}
+\usepackage{amsmath}
+\usepackage{lipsum}
+%\syntaxonly %uncomment this line to suppress pdf output
+
+\hyphenation{FORTRAN Hy-phen-a-tion} %allows hyphenation to by hyphenated and explicitly prevents FORTRAN from being hyphenated
+
+\author{A. Beck}
+\title{Words, etc}
 
 \begin{document}
 
+\maketitle
+
+\begin{abstract}
+This is a document about nothing.
+\end{abstract}
+
+\tableofcontents
+
+\section{The Beginning}
 Experienced \TeX{} users are \TeX perts, and know how to use whitespace. %note difference when we do and do not use {} with \TeX command
 
+Please, start a new line right here!\newline
+Thank you!
+
+This is another
+\begin{comment}
+rather stupid,
+but helpful
+\end{comment}
+example for embedding
+comments in your document.
+
+\newpage
+This text should appear on a new page.
+
+\section{Another section coming at ya}
+The parameter \mbox{\emph{filename}} should contain the name of the file. %mbox forces its contents to be on the same line (i.e. prevents hyphenated split if at end of line)
+
+\subsection{What's in the box?}
+\label{box}\fbox{Is there a box around this line of text???}
+
+\subsection{Quotation woes}
+``\LaTeX{} does not make things easy to remember in regards to quotation marks,'' moaned the whiny graduate student.
+
+\subsection{Dashes and other symbols}
+\subsubsection{HOW DASHING}
+daughter-in-law, X-rated\\ %hyphen
+pages 13--67\\ %en-dash
+yes---or no? \\ %em-dash
+$0$, $1$ and $-1$ %minus-sign
+
+\subsubsection{Some more symbolz}
+There is a tilde command (\~{}), but it might be more visually appealing to use $\sim$
+
+It's $-30\,^{\circ}\mathrm{C}$.
+I will soon start to
+super-conduct.
+
+Not like this ... but like this:\\
+New York, Tokyo, Budapest, \ldots
+
+\subsubsection{Spice things up with some accents, etc}
+
+H\^otel, na\"\i ve, \'el\`eve,\\
+sm\o rrebr\o d, !`Se\~norita!,\\
+Sch\"onbrunner Schlo\ss{}
+Stra\ss e
+
+\subsection{Referring to the box above}
+Do you remember the box above on page \pageref{box}? It was in section \ref{box}. You don't? That's a pity.\footnote{It's not too far up this very same page\ldots}
+
+\section{Environments}
+\subsection{Itemize, Enumerate, and Decription}
+
+\flushleft
+\begin{enumerate}
+\item You can nest the list
+environments to your taste:
+\begin{itemize}
+\item But it might start to
+look silly.
+\item[-] With a dash.
+\end{itemize}
+\item Therefore remember:
+\begin{description}
+\item[Stupid] things will not
+become smart because they are
+in a list.
+\item[Smart] things, though,
+can be presented beautifully
+in a list.
+\end{description}
+\end{enumerate}
+
+\subsection{Quote, Quotation}
+
+One might be interested in using the quote environment:
+\begin{quote}
+If what one is quoting is rather short
+\end{quote}
+
+The quotation environment is useful for longer quotes that span multiple paragraphs:
+\begin{quotation}
+\lipsum[1-4]
+\end{quotation}
+
+\subsection{Other environments}
+\begin{verbatim*}
+Notice how all of 
+the spaces are emphasized?
+\end{verbatim*}
+
+\subsubsection{Tables?}
+\begin{tabular}{|r|l|}
+\hline
+7C0 & hexadecimal \\
+3700 & octal \\ \cline{2-2}
+11111000000 & binary \\
+\hline \hline
+1984 & decimal \\
+\hline
+\end{tabular}
+
+What follows next is a table of my own concoction:
+
+\begin{tabular}{|c|c|c|}
+\hline
+Andy & Is & Cool \\ \cline{1-3}
+Don't & You & Know? \\
+No & cline & here \\
+\hline
+What & happens & Now? \\
+\hline
+\end{tabular}
+
+This is a table where we've removed the leading space:
+
+\begin{tabular}{@{} l @{}}
+\hline
+no leading space\\
+\hline
+\end{tabular}
+
+When actually creating tables, you'll likely want to use the booktabs package.
+
 \end{document}
+
