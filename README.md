@@ -7,3 +7,5 @@ Example documents made with the intention of learning LaTeX. Based off my readin
    Document created based on the material found in chapters 1 and 2.
 
 2. doc02
+
+   Basics of typesetting mathematical formulae (chapter 3)
